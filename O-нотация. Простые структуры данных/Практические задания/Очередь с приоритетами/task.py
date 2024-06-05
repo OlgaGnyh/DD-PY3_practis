@@ -13,6 +13,7 @@ class PriorityQueue:
 
     def __init__(self):
         ...  # TODO использовать deque для реализации очереди с приоритетами
+        self.que: dict[ int, deque] = {priority: deque() for priority in range(self.HIGH_PRIORITY, self.LOW_PRIORITY+1)}
 
     def enqueue(self, elem: Any, priority: int = 0) -> None:
         """
@@ -22,6 +23,7 @@ class PriorityQueue:
         :param priority: Приоритет добавляемого элемента
         """
         ...  # TODO реализовать метод enqueue
+        self.que[priority].append(elem)
 
     def dequeue(self) -> Any:
         """
@@ -32,6 +34,10 @@ class PriorityQueue:
         :return: Извлеченный с начала очереди элемент.
         """
         ...  # TODO реализовать метод dequeue
+        for que in self.que.values():
+            if que:
+                return que.popleft()
+        raise IndexError
 
     def peek(self, ind: int = 0, priority: int = 0) -> Any:
         """
@@ -46,11 +52,25 @@ class PriorityQueue:
         :return: Значение просмотренного элемента
         """
         ...  # TODO реализовать метод peek
+        if not isinstance(ind, int):
+            raise TypeError(f"Индекс должен быть целым числом")
+
+        que = self.que[priority]
+        if not 0 <= ind < len(que):
+            raise IndexError("Индекс все границ очереди")
+        return que[ind]
 
     def clear(self) -> None:
         """ Очистка очереди. """
         ...  # TODO реализовать метод clear
+        for que in self.que.values():
+            que.clear()
 
     def __len__(self):
         """ Количество элементов в очереди. """
         ...  # TODO реализовать метод __len__
+        len_ = 0
+        for que in self.que.values():
+            len_ += len(que)
+        return len_
+
