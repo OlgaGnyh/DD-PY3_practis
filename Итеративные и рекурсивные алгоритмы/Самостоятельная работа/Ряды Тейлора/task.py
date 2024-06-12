@@ -14,3 +14,16 @@ def sinx(x: Union[int, float]) -> float:
     :return: значение sin(x)
     """
     ...  # TODO вычислить sin(x) с помощью разложения сумму бесконечного ряда
+    def part_value(n):
+         return ((-1) ** n) * (x ** (2 * n + 1)) / factorial(2 * n + 1)
+
+    summa = 0
+    for i in count():
+        value = part_value(i)
+        summa += value
+
+        if abs(value) <= DELTA:
+            return summa
+
+
+print(sinx(3.14))

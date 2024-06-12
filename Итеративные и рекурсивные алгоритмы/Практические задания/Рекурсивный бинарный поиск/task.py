@@ -31,7 +31,6 @@ def binary_search(
                 break
             else:
                 mid_index -= 1
-
         # while not 0 <= mid_index - 1 <= len(seq) or seq[mid_index-1] != value:
         #     mid_index -= 1
         return mid_index

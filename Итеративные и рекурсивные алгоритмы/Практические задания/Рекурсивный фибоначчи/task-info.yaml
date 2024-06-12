@@ -3,7 +3,7 @@ files:
 - name: task.py
   visible: true
   placeholders:
-  - offset: 386
+  - offset: 269
     length: 44
     placeholder_text: "...  # TODO реализовать рекурсивный алгоритм"
     initial_state:
@@ -66,5 +66,5 @@ files:
 status: Solved
 feedback:
   message: Congratulations!
-  time: "Thu, 06 Jun 2024 16:02:53 UTC"
+  time: "Mon, 10 Jun 2024 15:34:44 UTC"
 record: -1
