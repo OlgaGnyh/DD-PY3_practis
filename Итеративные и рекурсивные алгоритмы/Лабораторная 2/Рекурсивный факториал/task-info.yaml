@@ -8,7 +8,7 @@ files:
     placeholder_text: "...  # TODO реализовать рекурсивный алгоритм нахождения фак\
       ториала"
     initial_state:
-      length: 66
+      length: 61
       offset: 203
     initialized_from_dependency: false
     selected: true
@@ -60,5 +60,5 @@ files:
 status: Solved
 feedback:
   message: Congratulations!
-  time: "Wed, 12 Jun 2024 08:43:36 UTC"
+  time: "Thu, 13 Jun 2024 15:04:53 UTC"
 record: -1

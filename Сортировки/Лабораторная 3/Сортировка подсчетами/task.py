@@ -13,3 +13,18 @@ def sort(container: Sequence[int]) -> Sequence[int]:
     :return: Отсортированный в порядке возрастания массив
     """
     ...  # TODO реализовать алгоритм сортировки подсчетами
+    if not container:
+        return container
+
+    min_val = min(container)
+    max_val = max(container)
+    data = {key: [] for key in range(min_val, max_val)}
+    result = []
+    for value in container:
+        data[value].append(value)
+
+    for value in data.values():
+        if value:
+            result.extend(value)
+
+    return result

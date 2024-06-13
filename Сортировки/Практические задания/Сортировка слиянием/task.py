@@ -1,6 +1,22 @@
 from typing import List
 
 
+def merge(left: list, right: list) -> list:
+    result = []
+    i, j = 0, 0
+
+    while i < len(left) and j < len(right):
+        if left[i] <= right[j]:
+            result.append(left[i])
+            i += 1
+        else:
+            result.append(right[j])
+            j += 1
+    result.extend(left[i:])
+    result.extend(right[j:])
+    return result
+
+
 def sort(container: List[int]) -> List[int]:
     """
     Алгоритм сортировки слиянием.
@@ -13,3 +29,13 @@ def sort(container: List[int]) -> List[int]:
     :return: Отсортированный в порядке возрастания массив
     """
     ...  # TODO реализуйте сортировку слиянием
+    if len(container) <= 1:
+        return container
+    middle = len(container) // 2
+    left = sort(container[:middle])
+    right = sort(container[middle:])
+    return merge(left, right)
+
+
+print(merge([1,3,8], [2,4,5]))
+print(sort([98, 45, 1, 5, 6, 8, 7, 54]))

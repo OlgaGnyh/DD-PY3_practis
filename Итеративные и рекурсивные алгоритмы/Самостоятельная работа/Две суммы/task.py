@@ -8,18 +8,27 @@ def two_sum(nums: List[int], target: int) -> List[int]:
     #         if value1 + value2 == target and ind1 != ind2:
     #             return [ind1, ind2]
 
-    dq = deque(sorted([(val, idx) for idx, val in enumerate(nums)]))
+# """ Второй вариант"""
+    # dq = deque(sorted([(val, idx) for idx, val in enumerate(nums)]))
+    #
+    # while True:
+    #     summa = dq[0][0] + dq[-1][0]
+    #
+    #     if summa > target:
+    #         dq.pop()
+    #     elif summa < target:
+    #         dq.popleft()
+    #     else:
+    #         break
+    # return [dq[0][1], dq[-1][1]]
 
-    while True:
-        summa = dq[0][0] + dq[-1][0]
-
-        if summa > target:
-            dq.pop()
-        elif summa < target:
-            dq.popleft()
-        else:
-            break
-    return [dq[0][1], dq[-1][1]]
+# """ Третий вариант"""
+    result_dict = {}
+    for ind, value in enumerate(nums):
+        result_dict[target - value] = ind
+    for ind, value in enumerate(nums):
+        if value in result_dict:
+            return result_dict[value], ind
 
 
 print(two_sum([3, 6, 2, 9, 1], 10))

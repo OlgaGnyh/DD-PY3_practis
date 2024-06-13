@@ -3,7 +3,7 @@ files:
 - name: task.py
   visible: true
   placeholders:
-  - offset: 115
+  - offset: 86
     length: 3
     placeholder_text: '...'
     initial_state:
@@ -57,5 +57,5 @@ files:
 status: Solved
 feedback:
   message: Congratulations!
-  time: "Wed, 12 Jun 2024 12:15:10 UTC"
+  time: "Thu, 13 Jun 2024 15:04:38 UTC"
 record: -1
