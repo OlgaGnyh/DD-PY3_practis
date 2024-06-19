@@ -18,7 +18,7 @@ def sort(container: Sequence[int]) -> Sequence[int]:
 
     min_val = min(container)
     max_val = max(container)
-    data = {key: [] for key in range(min_val, max_val)}
+    data = {key: [] for key in range(min_val, max_val + 1)}
     result = []
     for value in container:
         data[value].append(value)
@@ -28,3 +28,6 @@ def sort(container: Sequence[int]) -> Sequence[int]:
             result.extend(value)
 
     return result
+
+
+print(sort([98, 45, 1, 5, 6, 8, 7, 54]))

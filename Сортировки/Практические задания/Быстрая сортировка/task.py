@@ -38,4 +38,8 @@ def sort(container: List[int]) -> List[int]:
             pivot_ind = partition(container, low, high)
             _sort(container, low, pivot_ind - 1)
             _sort(container, pivot_ind + 1, high)
+        return container
     return _sort(container, 0, len(container) - 1)
+
+
+print(sort([98, 45, 1, 5, 6, 8, 7, 54]))
