@@ -11,6 +11,22 @@ def rocket_coasts(table: List[List[int]]) -> List[List[int]]:
     :return: Таблицу стоимостей перемещения по клеткам
     """
     ...  # TODO рассчитать таблицу стоимостей перемещений
+    n = len(table)      # кол-во столбцов
+    m = len(table[0])   # кол-во строк
+    table_cost = [[0] * m for i in range(n)]
+    table_cost[0][0] = table[0][0]
+
+    for ind in range(1, m):
+        table_cost[0][ind] = table_cost[0][ind - 1] + table[0][ind]
+
+    for ind in range(1, n):
+        table_cost[ind][0] = table_cost[ind - 1][0] + table[ind][0]
+
+    for i in range(1, n):
+        for j in range(1, m):
+            table_cost[i][j] = min(table_cost[i-1][j], table_cost[i][j-1]) + table[i][j]
+
+    return table_cost
 
 
 if __name__ == '__main__':
