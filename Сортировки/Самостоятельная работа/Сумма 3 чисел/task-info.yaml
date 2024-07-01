@@ -11,7 +11,7 @@ files:
       offset: 81
     initialized_from_dependency: false
     selected: false
-    status: Unchecked
+    status: Failed
     encrypted_possible_answer: |-
       nums.sort()
           result = []
@@ -74,5 +74,11 @@ files:
 - name: tests/__init__.py
   visible: false
   learner_created: false
-status: Unchecked
+status: Failed
+feedback:
+  message: "Lists differ: [[-1, 0, 1], [-1, 1, 0], [-1, 2, -1], [-1, -1, 2]] != [[-1,\
+    \ -1, 2], [-1, 0, 1]]"
+  time: "Wed, 19 Jun 2024 17:52:45 UTC"
+  expected: "[[-1, 0, 1], [-1, 1, 0], [-1, 2, -1], [-1, -1, 2]]"
+  actual: "[[-1, -1, 2], [-1, 0, 1]]"
 record: -1

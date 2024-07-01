@@ -11,7 +11,7 @@ files:
       offset: 48
     initialized_from_dependency: false
     selected: false
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: |-
       i, j = 0, 0
           while i < len(s) and j < len(t):
@@ -45,5 +45,8 @@ files:
 - name: tests/__init__.py
   visible: false
   learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Wed, 26 Jun 2024 15:34:01 UTC"
 record: -1

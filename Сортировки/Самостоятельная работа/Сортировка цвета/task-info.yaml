@@ -11,7 +11,7 @@ files:
       offset: 152
     initialized_from_dependency: false
     selected: false
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: |-
       low, mid, high = 0, 0, len(nums) - 1
           while mid <= high:
@@ -62,5 +62,8 @@ files:
 - name: tests/__init__.py
   visible: false
   learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Wed, 19 Jun 2024 18:44:12 UTC"
 record: -1

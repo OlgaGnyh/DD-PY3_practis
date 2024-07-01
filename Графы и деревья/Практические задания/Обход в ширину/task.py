@@ -36,7 +36,7 @@ def bfs(g: nx.Graph, start_node: Hashable) -> List[Hashable]:
 if __name__ == '__main__':
     # TODO записать граф с помощью модуля networkx и прверить обход в ширину
     graph = nx.Graph()
-    graph.add_nodes_from('ABCDEFGIHJ')
+    # graph.add_nodes_from('ABCDEFGIHJ')
     graph.add_edges_from([
         ('A', 'B'),
         ('A', 'F'),
@@ -54,5 +54,5 @@ if __name__ == '__main__':
 
     ])
     nx.draw_networkx(graph)
-    # plt.show()
+    plt.show()
     print(bfs(graph, 'A'))

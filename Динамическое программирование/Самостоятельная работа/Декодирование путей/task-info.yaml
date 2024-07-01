@@ -10,8 +10,8 @@ files:
       length: 3
       offset: 38
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Failed
     encrypted_possible_answer: |-
       if not s:
               return 0
@@ -54,5 +54,8 @@ files:
 - name: tests/__init__.py
   visible: false
   learner_created: false
-status: Unchecked
+status: Failed
+feedback:
+  message: Error
+  time: "Wed, 26 Jun 2024 16:04:00 UTC"
 record: -1

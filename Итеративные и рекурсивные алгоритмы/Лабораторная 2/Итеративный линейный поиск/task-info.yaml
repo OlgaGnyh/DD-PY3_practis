@@ -10,7 +10,7 @@ files:
       length: 50
       offset: 294
     initialized_from_dependency: false
-    selected: false
+    selected: true
     status: Solved
     encrypted_possible_answer: '...'
   text: |
@@ -69,5 +69,5 @@ files:
 status: Solved
 feedback:
   message: Congratulations!
-  time: "Thu, 13 Jun 2024 15:05:01 UTC"
+  time: "Wed, 12 Jun 2024 07:55:35 UTC"
 record: -1

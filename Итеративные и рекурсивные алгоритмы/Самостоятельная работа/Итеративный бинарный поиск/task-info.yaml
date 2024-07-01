@@ -8,7 +8,7 @@ files:
     placeholder_text: "...  # TODO реализовать итеративный алгоритм бинарного поис\
       ка"
     initial_state:
-      length: 56
+      length: 61
       offset: 381
     initialized_from_dependency: false
     selected: true
@@ -131,5 +131,5 @@ files:
 status: Solved
 feedback:
   message: Congratulations!
-  time: "Thu, 13 Jun 2024 15:04:47 UTC"
+  time: "Wed, 12 Jun 2024 10:36:29 UTC"
 record: -1
